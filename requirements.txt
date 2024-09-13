@@ -1,1 +1,6 @@
 # Libraries required for this project
+flask==3.0.3
+pandas == 2.2.2
+pytest
+lint
+numpy
