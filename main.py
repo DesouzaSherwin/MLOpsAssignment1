@@ -9,7 +9,7 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.metrics import mean_squared_error, r2_score
 
 
-df = pd.read_csv(r'housing.csv')
+df = pd.read_csv('housing.csv')
 
 
 X = df.drop('median_house_value',axis=1)
