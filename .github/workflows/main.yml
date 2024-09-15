@@ -11,7 +11,7 @@ on:
       - feature-api
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -37,4 +37,11 @@ jobs:
     - name: Run unit tests
       run: |
         pytest APITesting.py
+
+    -  name: Deploy to Vercel
+       run: |
+        npm install -g vercel
+        vercel --prod --token=$VERCEL_TOKEN 
+       env:
+        VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
 
